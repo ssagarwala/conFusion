@@ -22,7 +22,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
+            <a class="navbar-brand mr-auto" href="./index.html"><img src="images/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#">
@@ -45,8 +45,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="images/logo.png" class="img-fluid">
+                <div class="col-12 col-sm-3">
+                    <img src="images/logo.png" class="img-fluid"> 
+                </div>
+                <div class="col-12 col-sm-3 mt-5">
+                    <a class="btn btn-warning btn-small btn-block" href="#reserve"  role="button">Reserve Table</a>                        
                 </div>
             </div>
         </div>
@@ -75,12 +78,21 @@
 
 
         <div class="row row-content align-items-center"> 
-            <div class="col-12 col-sm-4 col-md-3">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col col-sm order-sm-last col-md">
+                <div class="media">                   
+                    <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet
+                            <span class="badge badge-danger">NEW</span>
+                        </h2>  
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, 
+                            six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly
+                             and soft drinks. All for just $19.99 per person </p>                        
+                    </div>
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/buffet.png" alt="buffet">
+               </div>
             </div>
         </div>
 
@@ -99,6 +111,61 @@
                             </p>
                     </div>                    
                 </div>              
+            </div>
+        </div>
+       
+        <div class="row row-content justify-content-center" id="reserve">
+            <div class="col-12 col-sm-8">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">
+                        Reserve a Table
+                    </h3>
+                    <div class="card-body">                    
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label  for="inlineRadio">Number of Guests</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3 </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                    <label class="form-check-label" for="inlineRadio4">4 </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio5">5 </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                    <label class="form-check-label" for="inlineRadio6">6 </label>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-2">
+                                   <label for="form-control"> Date and Time</label>
+                                </div>
+                                <div class="col-sm-4">
+                                   <input type="text" class="form-control" placeholder="Date">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" placeholder="Time">
+                                </div>
+                            </div>                          
+                             <button class="btn btn-primary ml-5"  type="submit">Reserve</button>                                         
+                         </form>                     
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -152,11 +219,20 @@
 
 </html>
 
-const circle = {
-    radius: 10,
-    color: 'orange',
-    getArea: 'kkk',
-    getCircumference: 'lll'
-  };
-  
-  let {radius, color, getArea, getCircumference} = ncircle;
+<!--
+                            <div class="form-group row">
+                                <label for="date" class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                                <div class="col-12 col-sm-5">
+                                       <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                                </div>
+                                <div class="col-12 col-sm-5">
+                                    <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-sm-2 col-sm-6">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+    
+-->
