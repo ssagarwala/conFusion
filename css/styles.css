@@ -2,7 +2,7 @@
   margin: 0px auto;
   padding: 0px 0px 0px; }
 
-row-content {
+.row-content {
   margin: 0px auto;
   padding: 50px 0px;
   border-bottom: 1px ridge;
@@ -50,3 +50,13 @@ body {
   right: 0px;
   position: absolute;
   bottom: 0px; }
+
+.modal-header {
+  background-color: #512AD8;
+  color: floralwhite; }
+
+.modal-body {
+  background-color: #D1C4E9; }
+
+.close {
+  color: floralwhite; }
